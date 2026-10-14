@@ -1,4 +1,4 @@
-from fastapi.middleware.cors import CORSMiddleware
+
 import json
 import os
 from datetime import datetime, timezone
@@ -125,15 +125,34 @@ app = FastAPI(
     ),
     version="1.1.0",
 )
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://telco-iq.vercel.app",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
     ],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Allow the local Next.js frontend to call the API.
 app.add_middleware(
     CORSMiddleware,
