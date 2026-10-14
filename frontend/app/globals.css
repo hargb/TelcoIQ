@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #eee4ce;
+  --foreground: #24271d;
+  --retro-paper: #f7efd9;
+  --retro-green: #315c45;
+  --retro-orange: #c65b36;
+  --retro-border: #b7ad91;
+  --retro-muted: #777257;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Georgia, "Times New Roman", serif;
+  --font-mono: "Courier New", monospace;
+}
+
+html {
+  min-height: 100%;
+  background: var(--background);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--retro-green);
+  color: var(--retro-paper);
+}

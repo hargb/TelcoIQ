@@ -1,0 +1,6 @@
+{
+    "threshold": 0.6,
+    "positive_class": "Yes",
+    "model_type": "LogisticRegression",
+    "threshold_selection": "Validation F1-score comparison"
+}
